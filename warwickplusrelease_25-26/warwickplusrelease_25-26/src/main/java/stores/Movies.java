@@ -22,7 +22,7 @@ public class Movies implements IMovies{
     /**
      * Adds data about a film to the data structure
      * 
-     * @param id               The unique ID for the film
+     * @param id               The unique ID for the film //tmbd_id인듯
      * @param title            The English title of the film
      * @param originalTitle    The original language title of the film
      * @param overview         An overview of the film
@@ -349,8 +349,8 @@ public class Movies implements IMovies{
      * Adds a given film to a collection. The collection is required to have an ID
      * number, a name, and a URL to a poster for the collection
      * 
-     * @param filmID                 The movie ID
-     * @param collectionID           The collection ID
+     * @param filmID                 The movie ID 그냥 영화 전용인듯
+     * @param collectionID           The collection ID, name, posterpath, backdrop path는 같은 collection이면 같은 값
      * @param collectionName         The name of the collection
      * @param collectionPosterPath   The URL where the poster can
      *                               be found
@@ -371,6 +371,7 @@ public class Movies implements IMovies{
      * @return An array of film IDs that correspond to the given collection ID. If
      *         there are no films in the collection ID, or if the collection ID is
      *         not valid, return an empty array.
+     * use 2.
      */
     @Override
     public int[] getFilmsInCollection(int collectionID) {
@@ -384,6 +385,7 @@ public class Movies implements IMovies{
      * @param collectionID The collection ID
      * @return The name of the collection. If the collection cannot be found, then
      *         return null
+     * use 1.
      */
     @Override
     public String getCollectionName(int collectionID) {
@@ -397,6 +399,7 @@ public class Movies implements IMovies{
      * @param collectionID The collection ID
      * @return The poster URL of the collection. If the collection cannot be found,
      *         then return null
+     * use 1.
      */
     @Override
     public String getCollectionPoster(int collectionID) {
@@ -410,6 +413,7 @@ public class Movies implements IMovies{
      * @param collectionID The collection ID
      * @return The backdrop URL of the collection. If the collection cannot be
      *         found, then return null
+     * use 1.
      */
     @Override
     public String getCollectionBackdrop(int collectionID) {
@@ -423,6 +427,7 @@ public class Movies implements IMovies{
      * @param filmID The movie ID
      * @return The collection ID for the requested film. If the film cannot be
      *         found, then return -1
+     * use 1.
      */
     @Override
     public int getCollectionID(int filmID) {
