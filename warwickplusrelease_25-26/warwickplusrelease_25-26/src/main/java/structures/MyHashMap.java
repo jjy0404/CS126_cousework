@@ -175,6 +175,23 @@ public class MyHashMap<K, V> {
         return keys;
     }
 
+    public MyArrayList<V> valueSet() {
+        MyArrayList<V> values = new MyArrayList<>();
+
+        for (int i = 0; i < capacity; i++) {
+            MyArrayList<Node<K, V>> bucket = table[i];
+
+            if (bucket != null) {
+                for (int j = 0; j < bucket.size(); j++) {
+                    Node<K, V> node = bucket.get(j);
+                    values.add(node.value); // Add the key to our result list
+                }
+            }
+        }
+
+        return values;
+    }
+
     public int size() {
         return size;
     }

@@ -178,6 +178,41 @@ public class MyAVLTree<K extends Comparable<? super K>, V> {
         }
     }
 
+    public MyArrayList<V> getTopN(int n) {
+    MyArrayList<V> result = new MyArrayList<>();
+    // 재귀 함수 호출 (루트부터 시작)
+    getTopNHelper(root, n, result);
+    return result;
+    }   
+
+    private void getTopNHelper(Node node, int n, MyArrayList<V> result) {
+        // 1. 중단 조건: 노드가 없거나 이미 N개를 다 채웠을 때
+        if (node == null || result.size() >= n) {
+            return;
+        }
+
+        // 2. 오른쪽 자식 방문 (더 큰 값들이 있는 곳)
+        getTopNHelper(node.right, n, result);
+
+        // 3. 현재 노드 방문 (중간 값)
+        // 현재 노드가 가진 values 리스트를 결과에 추가 (N개를 넘지 않도록 주의)
+        if (result.size() < n) {
+            MyArrayList<V> currentValues = node.values;
+            for (int i = 0; i < currentValues.size(); i++) {
+                if (result.size() < n) {
+                    result.add(currentValues.get(i));
+                } else {
+                    break;
+                }
+            }
+        }
+
+        // 4. 왼쪽 자식 방문 (더 작은 값들이 있는 곳)
+        if (result.size() < n) {
+            getTopNHelper(node.left, n, result);
+        }
+    }
+
     // ==========================================
     // Specific Value Deletion
     // ==========================================

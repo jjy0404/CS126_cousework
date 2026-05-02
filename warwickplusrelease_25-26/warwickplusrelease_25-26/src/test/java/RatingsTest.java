@@ -1,12 +1,17 @@
-import stores.*;
-
-import java.time.LocalDateTime;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
-import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
-import static org.junit.jupiter.api.Assertions.*;
+
+import stores.Genre;
+import stores.Stores;
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class RatingsTest {

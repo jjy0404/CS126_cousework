@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="CreditsTest" tests="90" skipped="0" failures="83" errors="0" timestamp="2026-05-01T19:17:27" hostname="DESKTOP-8PC6T74" time="0.621">
+<testsuite name="CreditsTest" tests="90" skipped="0" failures="83" errors="0" timestamp="2026-05-02T18:40:31" hostname="DESKTOP-8PC6T74" time="0.698">
   <properties/>
-  <testcase name="testCreditsSizeOfCrewDefault()" classname="CreditsTest" time="0.045">
+  <testcase name="testCreditsSizeOfCrewDefault()" classname="CreditsTest" time="0.062">
     <failure message="org.opentest4j.AssertionFailedError: When the store is empty, then regardless of which movie is requested, it should always return -1 ==&gt; expected: &lt;-1&gt; but was: &lt;-2&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: When the store is empty, then regardless of which movie is requested, it should always return -1 ==&gt; expected: &lt;-1&gt; but was: &lt;-2&gt;
 	at app//org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
 	at app//org.junit.jupiter.api.AssertionUtils.failNotEqual(AssertionUtils.java:62)
@@ -180,7 +180,7 @@
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="testCreditsFindCastDefault()" classname="CreditsTest" time="0.009">
+  <testcase name="testCreditsFindCastDefault()" classname="CreditsTest" time="0.005">
     <failure message="org.opentest4j.AssertionFailedError: The store is empty, so there is nothing to find ==&gt; expected: not &lt;null&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: The store is empty, so there is nothing to find ==&gt; expected: not &lt;null&gt;
 	at app//org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:39)
 	at app//org.junit.jupiter.api.Assertions.fail(Assertions.java:117)
@@ -270,7 +270,7 @@
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="testCreditsFindCastNeg()" classname="CreditsTest" time="0.005">
+  <testcase name="testCreditsFindCastNeg()" classname="CreditsTest" time="0.004">
     <failure message="org.opentest4j.AssertionFailedError: The function &quot;findCast&quot; should never return null ==&gt; expected: not &lt;null&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: The function &quot;findCast&quot; should never return null ==&gt; expected: not &lt;null&gt;
 	at app//org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:39)
 	at app//org.junit.jupiter.api.Assertions.fail(Assertions.java:117)
@@ -360,7 +360,7 @@
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="testCreditsFindCastPos()" classname="CreditsTest" time="0.011">
+  <testcase name="testCreditsFindCastPos()" classname="CreditsTest" time="0.009">
     <failure message="org.opentest4j.AssertionFailedError: The function &quot;findCast&quot; should never return null ==&gt; expected: not &lt;null&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: The function &quot;findCast&quot; should never return null ==&gt; expected: not &lt;null&gt;
 	at app//org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:39)
 	at app//org.junit.jupiter.api.Assertions.fail(Assertions.java:117)
@@ -450,7 +450,7 @@
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="testCreditsGetCastFilmsPos2Mix()" classname="CreditsTest" time="0.002">
+  <testcase name="testCreditsGetCastFilmsPos2Mix()" classname="CreditsTest" time="0.004">
     <failure message="org.opentest4j.AssertionFailedError: The function &quot;getCastFilms&quot; should never return null ==&gt; expected: not &lt;null&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: The function &quot;getCastFilms&quot; should never return null ==&gt; expected: not &lt;null&gt;
 	at app//org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:39)
 	at app//org.junit.jupiter.api.Assertions.fail(Assertions.java:117)
@@ -540,7 +540,7 @@
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="testCreditsGetUniqueCastPos2()" classname="CreditsTest" time="0.004">
+  <testcase name="testCreditsGetUniqueCastPos2()" classname="CreditsTest" time="0.003">
     <failure message="org.opentest4j.AssertionFailedError: The function &quot;getUniqueCast&quot; should never return null ==&gt; expected: not &lt;null&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: The function &quot;getUniqueCast&quot; should never return null ==&gt; expected: not &lt;null&gt;
 	at app//org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:39)
 	at app//org.junit.jupiter.api.Assertions.fail(Assertions.java:117)
@@ -630,7 +630,7 @@
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="testCreditsGetNumCastCreditsDefault()" classname="CreditsTest" time="0.002">
+  <testcase name="testCreditsGetNumCastCreditsDefault()" classname="CreditsTest" time="0.004">
     <failure message="org.opentest4j.AssertionFailedError: There are no cast members in the store, so should return -1 ==&gt; expected: &lt;-1&gt; but was: &lt;-2&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: There are no cast members in the store, so should return -1 ==&gt; expected: &lt;-1&gt; but was: &lt;-2&gt;
 	at app//org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
 	at app//org.junit.jupiter.api.AssertionUtils.failNotEqual(AssertionUtils.java:62)
@@ -719,7 +719,7 @@
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="testCreditsGetUniqueCastDefault()" classname="CreditsTest" time="0.004">
+  <testcase name="testCreditsGetUniqueCastDefault()" classname="CreditsTest" time="0.003">
     <failure message="org.opentest4j.AssertionFailedError: The function &quot;getUniqueCast&quot; should never return null ==&gt; expected: not &lt;null&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: The function &quot;getUniqueCast&quot; should never return null ==&gt; expected: not &lt;null&gt;
 	at app//org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:39)
 	at app//org.junit.jupiter.api.Assertions.fail(Assertions.java:117)
@@ -988,7 +988,7 @@
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="testCreditsGetNumCastCreditsPos2TwoInMovie()" classname="CreditsTest" time="0.006">
+  <testcase name="testCreditsGetNumCastCreditsPos2TwoInMovie()" classname="CreditsTest" time="0.003">
     <failure message="org.opentest4j.AssertionFailedError: The cast member has been in 1 movie, and has 2 credits in the movie. Therefore, the number of credits for the cast member is 2 ==&gt; expected: &lt;2&gt; but was: &lt;-2&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: The cast member has been in 1 movie, and has 2 credits in the movie. Therefore, the number of credits for the cast member is 2 ==&gt; expected: &lt;2&gt; but was: &lt;-2&gt;
 	at app//org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
 	at app//org.junit.jupiter.api.AssertionUtils.failNotEqual(AssertionUtils.java:62)
@@ -1257,7 +1257,7 @@
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="testCreditsSizeDefault()" classname="CreditsTest" time="0.003">
+  <testcase name="testCreditsSizeDefault()" classname="CreditsTest" time="0.004">
     <failure message="org.opentest4j.AssertionFailedError: The Credits store is empty, so there should be no films ==&gt; expected: &lt;0&gt; but was: &lt;-1&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: The Credits store is empty, so there should be no films ==&gt; expected: &lt;0&gt; but was: &lt;-1&gt;
 	at app//org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
 	at app//org.junit.jupiter.api.AssertionUtils.failNotEqual(AssertionUtils.java:62)
@@ -1346,7 +1346,7 @@
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="testCreditsSizeAfterAdd()" classname="CreditsTest" time="0.004">
+  <testcase name="testCreditsSizeAfterAdd()" classname="CreditsTest" time="0.003">
     <failure message="org.opentest4j.AssertionFailedError: 1 movie has been added (number of cast and crew do not matter for this function), so expected a size of 1 ==&gt; expected: &lt;1&gt; but was: &lt;-1&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: 1 movie has been added (number of cast and crew do not matter for this function), so expected a size of 1 ==&gt; expected: &lt;1&gt; but was: &lt;-1&gt;
 	at app//org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
 	at app//org.junit.jupiter.api.AssertionUtils.failNotEqual(AssertionUtils.java:62)
@@ -1435,7 +1435,7 @@
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="testCreditsGetCastPos2()" classname="CreditsTest" time="0.006">
+  <testcase name="testCreditsGetCastPos2()" classname="CreditsTest" time="0.004">
     <failure message="org.opentest4j.AssertionFailedError: The cast member exists, so should be able to be found ==&gt; expected: not &lt;null&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: The cast member exists, so should be able to be found ==&gt; expected: not &lt;null&gt;
 	at app//org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:39)
 	at app//org.junit.jupiter.api.Assertions.fail(Assertions.java:117)
@@ -1525,7 +1525,7 @@
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="testCreditsGetUniqueCastPos()" classname="CreditsTest" time="0.004">
+  <testcase name="testCreditsGetUniqueCastPos()" classname="CreditsTest" time="0.005">
     <failure message="org.opentest4j.AssertionFailedError: The function &quot;getUniqueCast&quot; should never return null ==&gt; expected: not &lt;null&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: The function &quot;getUniqueCast&quot; should never return null ==&gt; expected: not &lt;null&gt;
 	at app//org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:39)
 	at app//org.junit.jupiter.api.Assertions.fail(Assertions.java:117)
@@ -1615,7 +1615,7 @@
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="testCreditsSizeAfterRemove()" classname="CreditsTest" time="0.004">
+  <testcase name="testCreditsSizeAfterRemove()" classname="CreditsTest" time="0.005">
     <failure message="org.opentest4j.AssertionFailedError: A film was attempted to be removed, but the store was empty. Therefore, the store is still empty, thus has a size of 0 ==&gt; expected: &lt;0&gt; but was: &lt;-1&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: A film was attempted to be removed, but the store was empty. Therefore, the store is still empty, thus has a size of 0 ==&gt; expected: &lt;0&gt; but was: &lt;-1&gt;
 	at app//org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
 	at app//org.junit.jupiter.api.AssertionUtils.failNotEqual(AssertionUtils.java:62)
@@ -1704,7 +1704,7 @@
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="testCreditsGetFilmCrewPos2()" classname="CreditsTest" time="0.005">
+  <testcase name="testCreditsGetFilmCrewPos2()" classname="CreditsTest" time="0.006">
     <failure message="org.opentest4j.AssertionFailedError: The function &quot;getFilmCrew&quot; should never return null ==&gt; expected: not &lt;null&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: The function &quot;getFilmCrew&quot; should never return null ==&gt; expected: not &lt;null&gt;
 	at app//org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:39)
 	at app//org.junit.jupiter.api.Assertions.fail(Assertions.java:117)
@@ -1886,7 +1886,7 @@
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="testCreditsSizeAfterAdd2Remove()" classname="CreditsTest" time="0.004">
+  <testcase name="testCreditsSizeAfterAdd2Remove()" classname="CreditsTest" time="0.006">
     <failure message="org.opentest4j.AssertionFailedError: 2 movies were added, then 1 was removed. Therefore the total number of movies left is 1 ==&gt; expected: &lt;1&gt; but was: &lt;-1&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: 2 movies were added, then 1 was removed. Therefore the total number of movies left is 1 ==&gt; expected: &lt;1&gt; but was: &lt;-1&gt;
 	at app//org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
 	at app//org.junit.jupiter.api.AssertionUtils.failNotEqual(AssertionUtils.java:62)
@@ -1975,7 +1975,7 @@
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="testCreditsGetUniqueCrewPos()" classname="CreditsTest" time="0.012">
+  <testcase name="testCreditsGetUniqueCrewPos()" classname="CreditsTest" time="0.004">
     <failure message="org.opentest4j.AssertionFailedError: The function &quot;getUniqueCrew&quot; should never return null ==&gt; expected: not &lt;null&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: The function &quot;getUniqueCrew&quot; should never return null ==&gt; expected: not &lt;null&gt;
 	at app//org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:39)
 	at app//org.junit.jupiter.api.Assertions.fail(Assertions.java:117)
@@ -2065,7 +2065,7 @@
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="testCreditsFindCrewDefault()" classname="CreditsTest" time="0.009">
+  <testcase name="testCreditsFindCrewDefault()" classname="CreditsTest" time="0.003">
     <failure message="org.opentest4j.AssertionFailedError: The function &quot;findCrew&quot; should never return null ==&gt; expected: not &lt;null&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: The function &quot;findCrew&quot; should never return null ==&gt; expected: not &lt;null&gt;
 	at app//org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:39)
 	at app//org.junit.jupiter.api.Assertions.fail(Assertions.java:117)
@@ -2155,7 +2155,7 @@
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="testCreditsGetStarsInFilmsPos2NotAllFirst()" classname="CreditsTest" time="0.004">
+  <testcase name="testCreditsGetStarsInFilmsPos2NotAllFirst()" classname="CreditsTest" time="0.006">
     <failure message="org.opentest4j.AssertionFailedError: The function &quot;getCastStarsInFilms&quot; should never return null ==&gt; expected: not &lt;null&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: The function &quot;getCastStarsInFilms&quot; should never return null ==&gt; expected: not &lt;null&gt;
 	at app//org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:39)
 	at app//org.junit.jupiter.api.Assertions.fail(Assertions.java:117)
@@ -2245,7 +2245,7 @@
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="testCreditsGetMostCastCreditsDefault()" classname="CreditsTest" time="0.007">
+  <testcase name="testCreditsGetMostCastCreditsDefault()" classname="CreditsTest" time="0.005">
     <failure message="org.opentest4j.AssertionFailedError: The function &quot;getMostCastCredits&quot; should never return null ==&gt; expected: not &lt;null&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: The function &quot;getMostCastCredits&quot; should never return null ==&gt; expected: not &lt;null&gt;
 	at app//org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:39)
 	at app//org.junit.jupiter.api.Assertions.fail(Assertions.java:117)
@@ -2335,7 +2335,7 @@
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="testCreditsGetUniqueCrewDefault()" classname="CreditsTest" time="0.005">
+  <testcase name="testCreditsGetUniqueCrewDefault()" classname="CreditsTest" time="0.004">
     <failure message="org.opentest4j.AssertionFailedError: The function &quot;getUniqueCrew&quot; should never return null ==&gt; expected: not &lt;null&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: The function &quot;getUniqueCrew&quot; should never return null ==&gt; expected: not &lt;null&gt;
 	at app//org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:39)
 	at app//org.junit.jupiter.api.Assertions.fail(Assertions.java:117)
@@ -2426,7 +2426,7 @@
 </failure>
   </testcase>
   <testcase name="testCreditsGetCrewNeg()" classname="CreditsTest" time="0.002"/>
-  <testcase name="testCreditsGetCrewPos()" classname="CreditsTest" time="0.003">
+  <testcase name="testCreditsGetCrewPos()" classname="CreditsTest" time="0.004">
     <failure message="org.opentest4j.AssertionFailedError: The crew member exists, so should be able to be found ==&gt; expected: not &lt;null&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: The crew member exists, so should be able to be found ==&gt; expected: not &lt;null&gt;
 	at app//org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:39)
 	at app//org.junit.jupiter.api.Assertions.fail(Assertions.java:117)
@@ -2516,7 +2516,7 @@
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="testCreditsGetCrewFilmsPos2Mix()" classname="CreditsTest" time="0.005">
+  <testcase name="testCreditsGetCrewFilmsPos2Mix()" classname="CreditsTest" time="0.004">
     <failure message="org.opentest4j.AssertionFailedError: The function &quot;getCrewFilms&quot; should never return null ==&gt; expected: not &lt;null&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: The function &quot;getCrewFilms&quot; should never return null ==&gt; expected: not &lt;null&gt;
 	at app//org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:39)
 	at app//org.junit.jupiter.api.Assertions.fail(Assertions.java:117)
@@ -2606,7 +2606,7 @@
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="testCreditsGetCastStarsInFilmsNeg()" classname="CreditsTest" time="0.003">
+  <testcase name="testCreditsGetCastStarsInFilmsNeg()" classname="CreditsTest" time="0.007">
     <failure message="org.opentest4j.AssertionFailedError: The function &quot;getCastStarsInFilms&quot; should never return null ==&gt; expected: not &lt;null&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: The function &quot;getCastStarsInFilms&quot; should never return null ==&gt; expected: not &lt;null&gt;
 	at app//org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:39)
 	at app//org.junit.jupiter.api.Assertions.fail(Assertions.java:117)
@@ -2696,7 +2696,7 @@
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="testCreditsGetCastStarsInFilmsPos()" classname="CreditsTest" time="0.004">
+  <testcase name="testCreditsGetCastStarsInFilmsPos()" classname="CreditsTest" time="0.007">
     <failure message="org.opentest4j.AssertionFailedError: The function &quot;getCastStarsInFilms&quot; should never return null ==&gt; expected: not &lt;null&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: The function &quot;getCastStarsInFilms&quot; should never return null ==&gt; expected: not &lt;null&gt;
 	at app//org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:39)
 	at app//org.junit.jupiter.api.Assertions.fail(Assertions.java:117)
@@ -2786,7 +2786,7 @@
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="testCreditsGetUniqueCrewPos2()" classname="CreditsTest" time="0.007">
+  <testcase name="testCreditsGetUniqueCrewPos2()" classname="CreditsTest" time="0.01">
     <failure message="org.opentest4j.AssertionFailedError: The function &quot;getUniqueCrew&quot; should never return null ==&gt; expected: not &lt;null&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: The function &quot;getUniqueCrew&quot; should never return null ==&gt; expected: not &lt;null&gt;
 	at app//org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:39)
 	at app//org.junit.jupiter.api.Assertions.fail(Assertions.java:117)
@@ -2876,7 +2876,7 @@
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="testCreditsGetCastFilmsDefault()" classname="CreditsTest" time="0.003">
+  <testcase name="testCreditsGetCastFilmsDefault()" classname="CreditsTest" time="0.005">
     <failure message="org.opentest4j.AssertionFailedError: The function &quot;getCastFilms&quot; should never return null ==&gt; expected: not &lt;null&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: The function &quot;getCastFilms&quot; should never return null ==&gt; expected: not &lt;null&gt;
 	at app//org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:39)
 	at app//org.junit.jupiter.api.Assertions.fail(Assertions.java:117)
@@ -3056,7 +3056,7 @@
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="testCreditsGetMostCastCreditsPos2Multi()" classname="CreditsTest" time="0.008">
+  <testcase name="testCreditsGetMostCastCreditsPos2Multi()" classname="CreditsTest" time="0.003">
     <failure message="org.opentest4j.AssertionFailedError: The function &quot;getMostCastCredits&quot; should never return null ==&gt; expected: not &lt;null&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: The function &quot;getMostCastCredits&quot; should never return null ==&gt; expected: not &lt;null&gt;
 	at app//org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:39)
 	at app//org.junit.jupiter.api.Assertions.fail(Assertions.java:117)
@@ -3146,7 +3146,7 @@
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="testCreditsGetNumCastCreditsNeg()" classname="CreditsTest" time="0.003">
+  <testcase name="testCreditsGetNumCastCreditsNeg()" classname="CreditsTest" time="0.004">
     <failure message="org.opentest4j.AssertionFailedError: The cast member does not appear in any movie (even though there are both movies and credits). Therefore, -1 should be returned ==&gt; expected: &lt;-1&gt; but was: &lt;-2&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: The cast member does not appear in any movie (even though there are both movies and credits). Therefore, -1 should be returned ==&gt; expected: &lt;-1&gt; but was: &lt;-2&gt;
 	at app//org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
 	at app//org.junit.jupiter.api.AssertionUtils.failNotEqual(AssertionUtils.java:62)
@@ -3235,7 +3235,7 @@
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="testCreditsGetNumCastCreditsPos()" classname="CreditsTest" time="0.004">
+  <testcase name="testCreditsGetNumCastCreditsPos()" classname="CreditsTest" time="0.006">
     <failure message="org.opentest4j.AssertionFailedError: The cast member has been in 1 movie, and has 1 credit in the movie. Therefore, the number of credits for the cast member is 1 ==&gt; expected: &lt;1&gt; but was: &lt;-2&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: The cast member has been in 1 movie, and has 1 credit in the movie. Therefore, the number of credits for the cast member is 1 ==&gt; expected: &lt;1&gt; but was: &lt;-2&gt;
 	at app//org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
 	at app//org.junit.jupiter.api.AssertionUtils.failNotEqual(AssertionUtils.java:62)
@@ -3413,7 +3413,7 @@
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="testCreditsFindCastPos2()" classname="CreditsTest" time="0.008">
+  <testcase name="testCreditsFindCastPos2()" classname="CreditsTest" time="0.005">
     <failure message="org.opentest4j.AssertionFailedError: The function &quot;findCast&quot; should never return null ==&gt; expected: not &lt;null&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: The function &quot;findCast&quot; should never return null ==&gt; expected: not &lt;null&gt;
 	at app//org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:39)
 	at app//org.junit.jupiter.api.Assertions.fail(Assertions.java:117)
@@ -3503,7 +3503,7 @@
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="testCreditsGetUniqueCrewPos2Duplicate()" classname="CreditsTest" time="0.006">
+  <testcase name="testCreditsGetUniqueCrewPos2Duplicate()" classname="CreditsTest" time="0.008">
     <failure message="org.opentest4j.AssertionFailedError: The function &quot;getUniqueCast&quot; should never return null ==&gt; expected: not &lt;null&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: The function &quot;getUniqueCast&quot; should never return null ==&gt; expected: not &lt;null&gt;
 	at app//org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:39)
 	at app//org.junit.jupiter.api.Assertions.fail(Assertions.java:117)
@@ -3682,7 +3682,7 @@
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="testCreditsSizeOfCastPos()" classname="CreditsTest" time="0.007">
+  <testcase name="testCreditsSizeOfCastPos()" classname="CreditsTest" time="0.009">
     <failure message="org.opentest4j.AssertionFailedError: There is 1 cast members who worked on movie 1, so &quot;1&quot; should be returned ==&gt; expected: &lt;1&gt; but was: &lt;-2&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: There is 1 cast members who worked on movie 1, so &quot;1&quot; should be returned ==&gt; expected: &lt;1&gt; but was: &lt;-2&gt;
 	at app//org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
 	at app//org.junit.jupiter.api.AssertionUtils.failNotEqual(AssertionUtils.java:62)
@@ -3771,7 +3771,7 @@
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="testCreditsFindCastPosPart()" classname="CreditsTest" time="0.011">
+  <testcase name="testCreditsFindCastPosPart()" classname="CreditsTest" time="0.005">
     <failure message="org.opentest4j.AssertionFailedError: The function &quot;findCast&quot; should never return null ==&gt; expected: not &lt;null&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: The function &quot;findCast&quot; should never return null ==&gt; expected: not &lt;null&gt;
 	at app//org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:39)
 	at app//org.junit.jupiter.api.Assertions.fail(Assertions.java:117)
@@ -3861,7 +3861,7 @@
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="testCreditsGetFilmCastNeg()" classname="CreditsTest" time="0.003">
+  <testcase name="testCreditsGetFilmCastNeg()" classname="CreditsTest" time="0.007">
     <failure message="org.opentest4j.AssertionFailedError: The function &quot;getFilmCast&quot; should never return null ==&gt; expected: not &lt;null&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: The function &quot;getFilmCast&quot; should never return null ==&gt; expected: not &lt;null&gt;
 	at app//org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:39)
 	at app//org.junit.jupiter.api.Assertions.fail(Assertions.java:117)
@@ -3951,7 +3951,7 @@
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="testCreditsGetFilmCastPos()" classname="CreditsTest" time="0.002">
+  <testcase name="testCreditsGetFilmCastPos()" classname="CreditsTest" time="0.005">
     <failure message="org.opentest4j.AssertionFailedError: The function &quot;getFilmCast&quot; should never return null ==&gt; expected: not &lt;null&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: The function &quot;getFilmCast&quot; should never return null ==&gt; expected: not &lt;null&gt;
 	at app//org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:39)
 	at app//org.junit.jupiter.api.Assertions.fail(Assertions.java:117)
@@ -4041,7 +4041,7 @@
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="testCreditsGetStarsInFilmsPos2Multi()" classname="CreditsTest" time="0.006">
+  <testcase name="testCreditsGetStarsInFilmsPos2Multi()" classname="CreditsTest" time="0.007">
     <failure message="org.opentest4j.AssertionFailedError: The function &quot;getCastStarsInFilms&quot; should never return null ==&gt; expected: not &lt;null&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: The function &quot;getCastStarsInFilms&quot; should never return null ==&gt; expected: not &lt;null&gt;
 	at app//org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:39)
 	at app//org.junit.jupiter.api.Assertions.fail(Assertions.java:117)
@@ -4131,7 +4131,7 @@
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="testCreditsGetFilmCastDefault()" classname="CreditsTest" time="0.005">
+  <testcase name="testCreditsGetFilmCastDefault()" classname="CreditsTest" time="0.004">
     <failure message="org.opentest4j.AssertionFailedError: The function &quot;getFilmCast&quot; should never return null ==&gt; expected: not &lt;null&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: The function &quot;getFilmCast&quot; should never return null ==&gt; expected: not &lt;null&gt;
 	at app//org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:39)
 	at app//org.junit.jupiter.api.Assertions.fail(Assertions.java:117)
@@ -4221,7 +4221,7 @@
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="testCreditsSizeAfterAddRemove()" classname="CreditsTest" time="0.003">
+  <testcase name="testCreditsSizeAfterAddRemove()" classname="CreditsTest" time="0.004">
     <failure message="org.opentest4j.AssertionFailedError: 1 movie was added, and then removed. No other movie was added, so the size should be 0 ==&gt; expected: &lt;0&gt; but was: &lt;-1&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: 1 movie was added, and then removed. No other movie was added, so the size should be 0 ==&gt; expected: &lt;0&gt; but was: &lt;-1&gt;
 	at app//org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
 	at app//org.junit.jupiter.api.AssertionUtils.failNotEqual(AssertionUtils.java:62)
@@ -4489,8 +4489,8 @@
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="testCreditsGetCrewDefault()" classname="CreditsTest" time="0.002"/>
-  <testcase name="testCreditsGetStarsInFilmsPos2Mix()" classname="CreditsTest" time="0.003">
+  <testcase name="testCreditsGetCrewDefault()" classname="CreditsTest" time="0.001"/>
+  <testcase name="testCreditsGetStarsInFilmsPos2Mix()" classname="CreditsTest" time="0.005">
     <failure message="org.opentest4j.AssertionFailedError: The function &quot;getCastStarsInFilms&quot; should never return null ==&gt; expected: not &lt;null&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: The function &quot;getCastStarsInFilms&quot; should never return null ==&gt; expected: not &lt;null&gt;
 	at app//org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:39)
 	at app//org.junit.jupiter.api.Assertions.fail(Assertions.java:117)
@@ -4580,7 +4580,7 @@
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="testCreditsSizeOfCrewNeg()" classname="CreditsTest" time="0.002">
+  <testcase name="testCreditsSizeOfCrewNeg()" classname="CreditsTest" time="0.005">
     <failure message="org.opentest4j.AssertionFailedError: There is no movie with an ID of 2 in credits, so should return -1 ==&gt; expected: &lt;-1&gt; but was: &lt;-2&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: There is no movie with an ID of 2 in credits, so should return -1 ==&gt; expected: &lt;-1&gt; but was: &lt;-2&gt;
 	at app//org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
 	at app//org.junit.jupiter.api.AssertionUtils.failNotEqual(AssertionUtils.java:62)
@@ -4669,7 +4669,7 @@
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="testCreditsSizeOfCrewPos()" classname="CreditsTest" time="0.002">
+  <testcase name="testCreditsSizeOfCrewPos()" classname="CreditsTest" time="0.005">
     <failure message="org.opentest4j.AssertionFailedError: There is 1 crew members who worked on movie 1, so &quot;1&quot; should be returned ==&gt; expected: &lt;1&gt; but was: &lt;-2&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: There is 1 crew members who worked on movie 1, so &quot;1&quot; should be returned ==&gt; expected: &lt;1&gt; but was: &lt;-2&gt;
 	at app//org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
 	at app//org.junit.jupiter.api.AssertionUtils.failNotEqual(AssertionUtils.java:62)
@@ -4758,7 +4758,7 @@
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="testCreditsGetCastFilmsNeg()" classname="CreditsTest" time="0.002">
+  <testcase name="testCreditsGetCastFilmsNeg()" classname="CreditsTest" time="0.004">
     <failure message="org.opentest4j.AssertionFailedError: The function &quot;getCastFilms&quot; should never return null ==&gt; expected: not &lt;null&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: The function &quot;getCastFilms&quot; should never return null ==&gt; expected: not &lt;null&gt;
 	at app//org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:39)
 	at app//org.junit.jupiter.api.Assertions.fail(Assertions.java:117)
@@ -4848,7 +4848,7 @@
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="testCreditsGetCastFilmsPos()" classname="CreditsTest" time="0.002">
+  <testcase name="testCreditsGetCastFilmsPos()" classname="CreditsTest" time="0.005">
     <failure message="org.opentest4j.AssertionFailedError: The function &quot;getCastFilms&quot; should never return null ==&gt; expected: not &lt;null&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: The function &quot;getCastFilms&quot; should never return null ==&gt; expected: not &lt;null&gt;
 	at app//org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:39)
 	at app//org.junit.jupiter.api.Assertions.fail(Assertions.java:117)
@@ -4938,7 +4938,7 @@
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="testCreditsSizeOfCastDefault()" classname="CreditsTest" time="0.002">
+  <testcase name="testCreditsSizeOfCastDefault()" classname="CreditsTest" time="0.004">
     <failure message="org.opentest4j.AssertionFailedError: When the store is empty, then regardless of which movie is requested, it should always return -1 ==&gt; expected: &lt;-1&gt; but was: &lt;-2&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: When the store is empty, then regardless of which movie is requested, it should always return -1 ==&gt; expected: &lt;-1&gt; but was: &lt;-2&gt;
 	at app//org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
 	at app//org.junit.jupiter.api.AssertionUtils.failNotEqual(AssertionUtils.java:62)
@@ -5027,7 +5027,7 @@
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="testCreditsGetFilmCrewNeg()" classname="CreditsTest" time="0.003">
+  <testcase name="testCreditsGetFilmCrewNeg()" classname="CreditsTest" time="0.007">
     <failure message="org.opentest4j.AssertionFailedError: The function &quot;getFilmCrew&quot; should never return null ==&gt; expected: not &lt;null&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: The function &quot;getFilmCrew&quot; should never return null ==&gt; expected: not &lt;null&gt;
 	at app//org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:39)
 	at app//org.junit.jupiter.api.Assertions.fail(Assertions.java:117)
@@ -5117,7 +5117,7 @@
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="testCreditsGetFilmCrewPos()" classname="CreditsTest" time="0.002">
+  <testcase name="testCreditsGetFilmCrewPos()" classname="CreditsTest" time="0.008">
     <failure message="org.opentest4j.AssertionFailedError: The function &quot;getFilmCrew&quot; should never return null ==&gt; expected: not &lt;null&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: The function &quot;getFilmCrew&quot; should never return null ==&gt; expected: not &lt;null&gt;
 	at app//org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:39)
 	at app//org.junit.jupiter.api.Assertions.fail(Assertions.java:117)
@@ -5207,7 +5207,7 @@
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="testCreditsGetCastFilmsPos2()" classname="CreditsTest" time="0.003">
+  <testcase name="testCreditsGetCastFilmsPos2()" classname="CreditsTest" time="0.007">
     <failure message="org.opentest4j.AssertionFailedError: The function &quot;getCastFilms&quot; should never return null ==&gt; expected: not &lt;null&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: The function &quot;getCastFilms&quot; should never return null ==&gt; expected: not &lt;null&gt;
 	at app//org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:39)
 	at app//org.junit.jupiter.api.Assertions.fail(Assertions.java:117)
@@ -5297,7 +5297,7 @@
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="testCreditsGetMostCastCreditsPos2MultiOver()" classname="CreditsTest" time="0.005">
+  <testcase name="testCreditsGetMostCastCreditsPos2MultiOver()" classname="CreditsTest" time="0.012">
     <failure message="org.opentest4j.AssertionFailedError: The function &quot;getMostCastCredits&quot; should never return null ==&gt; expected: not &lt;null&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: The function &quot;getMostCastCredits&quot; should never return null ==&gt; expected: not &lt;null&gt;
 	at app//org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:39)
 	at app//org.junit.jupiter.api.Assertions.fail(Assertions.java:117)
@@ -5387,7 +5387,7 @@
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="testCreditsGetCastStarsInFilmsDefault()" classname="CreditsTest" time="0.003">
+  <testcase name="testCreditsGetCastStarsInFilmsDefault()" classname="CreditsTest" time="0.008">
     <failure message="org.opentest4j.AssertionFailedError: The function &quot;getCastStarsInFilms&quot; should never return null ==&gt; expected: not &lt;null&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: The function &quot;getCastStarsInFilms&quot; should never return null ==&gt; expected: not &lt;null&gt;
 	at app//org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:39)
 	at app//org.junit.jupiter.api.Assertions.fail(Assertions.java:117)
@@ -5477,7 +5477,7 @@
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="testCreditsGetNumCastCreditsPos2()" classname="CreditsTest" time="0.007">
+  <testcase name="testCreditsGetNumCastCreditsPos2()" classname="CreditsTest" time="0.003">
     <failure message="org.opentest4j.AssertionFailedError: The cast member has been in 2 movies, and has 1 credit in the movie. Therefore, the number of credits for the cast member is 2 ==&gt; expected: &lt;2&gt; but was: &lt;-2&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: The cast member has been in 2 movies, and has 1 credit in the movie. Therefore, the number of credits for the cast member is 2 ==&gt; expected: &lt;2&gt; but was: &lt;-2&gt;
 	at app//org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
 	at app//org.junit.jupiter.api.AssertionUtils.failNotEqual(AssertionUtils.java:62)
@@ -5566,7 +5566,7 @@
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="testCreditsGetCastStarsInFilmsNegOrder()" classname="CreditsTest" time="0.005">
+  <testcase name="testCreditsGetCastStarsInFilmsNegOrder()" classname="CreditsTest" time="0.004">
     <failure message="org.opentest4j.AssertionFailedError: The function &quot;getCastStarsInFilms&quot; should never return null ==&gt; expected: not &lt;null&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: The function &quot;getCastStarsInFilms&quot; should never return null ==&gt; expected: not &lt;null&gt;
 	at app//org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:39)
 	at app//org.junit.jupiter.api.Assertions.fail(Assertions.java:117)
@@ -5746,7 +5746,7 @@
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="testCreditsAddDefault()" classname="CreditsTest" time="0.008">
+  <testcase name="testCreditsAddDefault()" classname="CreditsTest" time="0.01">
     <failure message="org.opentest4j.AssertionFailedError: The store is empty, so should be able to add an element ==&gt; expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: The store is empty, so should be able to add an element ==&gt; expected: &lt;true&gt; but was: &lt;false&gt;
 	at app//org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
 	at app//org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:40)
@@ -5834,7 +5834,7 @@
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="testCreditsGetMostCastCreditsPos()" classname="CreditsTest" time="0.003">
+  <testcase name="testCreditsGetMostCastCreditsPos()" classname="CreditsTest" time="0.004">
     <failure message="org.opentest4j.AssertionFailedError: The function &quot;getMostCastCredits&quot; should never return null ==&gt; expected: not &lt;null&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: The function &quot;getMostCastCredits&quot; should never return null ==&gt; expected: not &lt;null&gt;
 	at app//org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:39)
 	at app//org.junit.jupiter.api.Assertions.fail(Assertions.java:117)
@@ -5924,7 +5924,7 @@
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="testCreditsGetUniqueCastPos2Duplicate()" classname="CreditsTest" time="0.004">
+  <testcase name="testCreditsGetUniqueCastPos2Duplicate()" classname="CreditsTest" time="0.005">
     <failure message="org.opentest4j.AssertionFailedError: The function &quot;getUniqueCast&quot; should never return null ==&gt; expected: not &lt;null&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: The function &quot;getUniqueCast&quot; should never return null ==&gt; expected: not &lt;null&gt;
 	at app//org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:39)
 	at app//org.junit.jupiter.api.Assertions.fail(Assertions.java:117)
@@ -6014,7 +6014,7 @@
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="testCreditsGetCastStarsInFilmsPos2()" classname="CreditsTest" time="0.007">
+  <testcase name="testCreditsGetCastStarsInFilmsPos2()" classname="CreditsTest" time="0.004">
     <failure message="org.opentest4j.AssertionFailedError: The function &quot;getCastStarsInFilms&quot; should never return null ==&gt; expected: not &lt;null&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: The function &quot;getCastStarsInFilms&quot; should never return null ==&gt; expected: not &lt;null&gt;
 	at app//org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:39)
 	at app//org.junit.jupiter.api.Assertions.fail(Assertions.java:117)
@@ -6104,7 +6104,7 @@
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="testCreditsGetFilmCastPos2()" classname="CreditsTest" time="0.006">
+  <testcase name="testCreditsGetFilmCastPos2()" classname="CreditsTest" time="0.002">
     <failure message="org.opentest4j.AssertionFailedError: The function &quot;getFilmCast&quot; should never return null ==&gt; expected: not &lt;null&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: The function &quot;getFilmCast&quot; should never return null ==&gt; expected: not &lt;null&gt;
 	at app//org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:39)
 	at app//org.junit.jupiter.api.Assertions.fail(Assertions.java:117)
@@ -6194,7 +6194,7 @@
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="testCreditsAddNeg()" classname="CreditsTest" time="0.008"/>
+  <testcase name="testCreditsAddNeg()" classname="CreditsTest" time="0.005"/>
   <testcase name="testCreditsAddPos()" classname="CreditsTest" time="0.004">
     <failure message="org.opentest4j.AssertionFailedError: There is no element with this film ID, so should be able to be added ==&gt; expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: There is no element with this film ID, so should be able to be added ==&gt; expected: &lt;true&gt; but was: &lt;false&gt;
 	at app//org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
@@ -6283,7 +6283,7 @@
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="testCreditsRemoveDefault()" classname="CreditsTest" time="0.001"/>
+  <testcase name="testCreditsRemoveDefault()" classname="CreditsTest" time="0.003"/>
   <testcase name="testCreditsFindCrewPosPart()" classname="CreditsTest" time="0.002">
     <failure message="org.opentest4j.AssertionFailedError: The function &quot;findCrew&quot; should never return null ==&gt; expected: not &lt;null&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: The function &quot;findCrew&quot; should never return null ==&gt; expected: not &lt;null&gt;
 	at app//org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:39)
@@ -6374,7 +6374,7 @@
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="testCreditsGetCrewFilmsDefault()" classname="CreditsTest" time="0.003">
+  <testcase name="testCreditsGetCrewFilmsDefault()" classname="CreditsTest" time="0.004">
     <failure message="org.opentest4j.AssertionFailedError: The function &quot;getCrewFilms&quot; should never return null ==&gt; expected: not &lt;null&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: The function &quot;getCrewFilms&quot; should never return null ==&gt; expected: not &lt;null&gt;
 	at app//org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:39)
 	at app//org.junit.jupiter.api.Assertions.fail(Assertions.java:117)
@@ -6464,7 +6464,7 @@
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="testCreditsGetMostCastCreditsPos2()" classname="CreditsTest" time="0.006">
+  <testcase name="testCreditsGetMostCastCreditsPos2()" classname="CreditsTest" time="0.004">
     <failure message="org.opentest4j.AssertionFailedError: The function &quot;getMostCastCredits&quot; should never return null ==&gt; expected: not &lt;null&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: The function &quot;getMostCastCredits&quot; should never return null ==&gt; expected: not &lt;null&gt;
 	at app//org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:39)
 	at app//org.junit.jupiter.api.Assertions.fail(Assertions.java:117)
@@ -6554,7 +6554,7 @@
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="testCreditsGetMostCastCreditsPos2MultiLimit()" classname="CreditsTest" time="0.003">
+  <testcase name="testCreditsGetMostCastCreditsPos2MultiLimit()" classname="CreditsTest" time="0.002">
     <failure message="org.opentest4j.AssertionFailedError: The function &quot;getMostCastCredits&quot; should never return null ==&gt; expected: not &lt;null&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: The function &quot;getMostCastCredits&quot; should never return null ==&gt; expected: not &lt;null&gt;
 	at app//org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:39)
 	at app//org.junit.jupiter.api.Assertions.fail(Assertions.java:117)
@@ -6645,7 +6645,7 @@
 </failure>
   </testcase>
   <testcase name="testCreditsRemoveNeg()" classname="CreditsTest" time="0.001"/>
-  <testcase name="testCreditsRemovePos()" classname="CreditsTest" time="0.002">
+  <testcase name="testCreditsRemovePos()" classname="CreditsTest" time="0.003">
     <failure message="org.opentest4j.AssertionFailedError: There is a movie with an ID of 1 in Credits, so should be able to remove it ==&gt; expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: There is a movie with an ID of 1 in Credits, so should be able to remove it ==&gt; expected: &lt;true&gt; but was: &lt;false&gt;
 	at app//org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
 	at app//org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:40)
@@ -6733,7 +6733,7 @@
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="testCreditsGetFilmCrewDefault()" classname="CreditsTest" time="0.004">
+  <testcase name="testCreditsGetFilmCrewDefault()" classname="CreditsTest" time="0.003">
     <failure message="org.opentest4j.AssertionFailedError: The function &quot;getFilmCrew&quot; should never return null ==&gt; expected: not &lt;null&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: The function &quot;getFilmCrew&quot; should never return null ==&gt; expected: not &lt;null&gt;
 	at app//org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:39)
 	at app//org.junit.jupiter.api.Assertions.fail(Assertions.java:117)
@@ -7003,7 +7003,7 @@
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="testCreditsGetCrewFilmsPos()" classname="CreditsTest" time="0.005">
+  <testcase name="testCreditsGetCrewFilmsPos()" classname="CreditsTest" time="0.006">
     <failure message="org.opentest4j.AssertionFailedError: The function &quot;getCrewFilms&quot; should never return null ==&gt; expected: not &lt;null&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: The function &quot;getCrewFilms&quot; should never return null ==&gt; expected: not &lt;null&gt;
 	at app//org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:39)
 	at app//org.junit.jupiter.api.Assertions.fail(Assertions.java:117)
@@ -7093,7 +7093,7 @@
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="testCreditsFindCrewPos2()" classname="CreditsTest" time="0.004">
+  <testcase name="testCreditsFindCrewPos2()" classname="CreditsTest" time="0.009">
     <failure message="org.opentest4j.AssertionFailedError: The function &quot;findCrew&quot; should never return null ==&gt; expected: not &lt;null&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: The function &quot;findCrew&quot; should never return null ==&gt; expected: not &lt;null&gt;
 	at app//org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:39)
 	at app//org.junit.jupiter.api.Assertions.fail(Assertions.java:117)
@@ -7183,7 +7183,7 @@
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="testCreditsGetMostCastCreditsPosOver()" classname="CreditsTest" time="0.003">
+  <testcase name="testCreditsGetMostCastCreditsPosOver()" classname="CreditsTest" time="0.004">
     <failure message="org.opentest4j.AssertionFailedError: The function &quot;getMostCastCredits&quot; should never return null ==&gt; expected: not &lt;null&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: The function &quot;getMostCastCredits&quot; should never return null ==&gt; expected: not &lt;null&gt;
 	at app//org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:39)
 	at app//org.junit.jupiter.api.Assertions.fail(Assertions.java:117)
@@ -7273,7 +7273,7 @@
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="testCreditsGetFilmCastPos2Reorder()" classname="CreditsTest" time="0.005">
+  <testcase name="testCreditsGetFilmCastPos2Reorder()" classname="CreditsTest" time="0.008">
     <failure message="java.lang.NullPointerException: Cannot read the array length because &quot;result&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot read the array length because &quot;result&quot; is null
 	at CreditsTest.testCreditsGetFilmCastPos2Reorder(CreditsTest.java:160)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)

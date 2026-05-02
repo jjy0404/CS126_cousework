@@ -126,10 +126,10 @@ public class Movies implements IMovies{
         // TODO Implement this function
         MyArrayList<Integer> ids = moviesByDate.getValuesInRange(start, end);
         
-            int[] allIDs = new int[ids.size()];
-            for (int i = 0; i < ids.size(); i++) {
-                allIDs[i] = ids.get(i);
-            }
+        int[] allIDs = new int[ids.size()];
+        for (int i = 0; i < ids.size(); i++) {
+            allIDs[i] = ids.get(i);
+        }
         return allIDs;
     }
 
