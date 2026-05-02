@@ -3,10 +3,13 @@ package stores;
 import java.time.LocalDateTime;
 
 import interfaces.IRatings;
-import structures.*;
+import structures.MyHashMap;
 
 public class Ratings implements IRatings {
     Stores stores;
+    MyHashMap<Integer, UserRating> usersDB;  //integer (userID)
+    MyHashMap<Integer, MovieRating> moviesDB;  //integer (movieID)
+
 
     /**
      * The constructor for the Ratings data store. This is where you should
@@ -17,6 +20,8 @@ public class Ratings implements IRatings {
     public Ratings(Stores stores) {
         this.stores = stores;
         // TODO Add initialisation of data structure here
+        this.usersDB = new MyHashMap<>(1000);
+        this.moviesDB = new MyHashMap<>(1000);
     }
 
     /**

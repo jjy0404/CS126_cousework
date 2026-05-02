@@ -24,13 +24,16 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import interfaces.*;
+import interfaces.AbstractStores;
+import interfaces.ICredits;
+import interfaces.IKeywords;
+import interfaces.IMovies;
+import interfaces.IRatings;
 import stores.CastCredit;
 import stores.Company;
 import stores.CrewCredit;
 import stores.Genre;
 import stores.Keyword;
-import interfaces.AbstractStores;
 
 public class LoadData implements Runnable {
 
@@ -71,7 +74,7 @@ public class LoadData implements Runnable {
                      String collectionBackdropPath, String imdb, double popularity, 
                      Company[] productionCompanies, String[] productionCountries
             ){
-            this.id = id;
+            this.id = id;   
             this.name = name;
             this.title = title;
             this.originalTitle = originalTitle;
