@@ -58,7 +58,7 @@ public class Movies implements IMovies{
     @Override
     public boolean add(int id, String title, String originalTitle, String overview, String tagline, String status, Genre[] genres, LocalDate release, long budget, long revenue, String[] languages, String originalLanguage, double runtime, String homepage, boolean adult, boolean video, String poster) {
         // TODO Implement this function
-        if ((id != -1) && (movieDB.get(id) == null)) {
+        if ((id != -1) && (movieDB.get(id) == null)) { // checking uniqness
             Movie newMovie = new Movie(id, title, originalTitle, overview, tagline, status, genres, release, budget, revenue, languages, originalLanguage, runtime, homepage, adult, video, poster);
             movieDB.put(id, newMovie);
             if (release != null) {
@@ -79,13 +79,13 @@ public class Movies implements IMovies{
     @Override
     public boolean remove(int id) {
         // TODO Implement this function
-        if ((id != -1) && (movieDB.get(id) != null)) {
+        if ((id != -1) && (movieDB.get(id) != null)) {  
             int collectionID = movieDB.get(id).getCollectionID();
             if ((collectionID != -1) && (collectionDB.get(collectionID) != null)) {
-                collectionDB.get(collectionID).removeFilmID(id);
+                collectionDB.get(collectionID).removeFilmID(id);  // deleting data from collectionDB
             }
-            moviesByDate.remove(movieDB.get(id).getRelease(), id);
-            movieDB.remove(id);
+            moviesByDate.remove(movieDB.get(id).getRelease(), id);  //deleating data from moviesByDate
+            movieDB.remove(id);  // deleting data from movieDB
             return true;
         }
         return false;
@@ -101,7 +101,7 @@ public class Movies implements IMovies{
     public int[] getAllIDs() {
         // TODO Implement this function
         MyArrayList<Integer> keys = movieDB.keySet();
-        if (keys.size() > 0) {
+        if (keys.size() > 0) {  // copying arraylist to array
             int[] allIDs = new int[keys.size()];
             for (int i = 0; i < keys.size(); i++) {
                 allIDs[i] = keys.get(i);
@@ -127,7 +127,7 @@ public class Movies implements IMovies{
         MyArrayList<Integer> ids = moviesByDate.getValuesInRange(start, end);
         
         int[] allIDs = new int[ids.size()];
-        for (int i = 0; i < ids.size(); i++) {
+        for (int i = 0; i < ids.size(); i++) {  // copying arraylist to array
             allIDs[i] = ids.get(i);
         }
         return allIDs;
@@ -407,7 +407,7 @@ public class Movies implements IMovies{
     public boolean setVote(int id, double voteAverage, int voteCount) {
         // TODO Implement this function
         if ((id != -1) && (movieDB.get(id) != null) && (voteAverage != -1.0) && (voteCount != -1)) {
-            movieDB.get(id).setVoteAverage(voteAverage);
+            movieDB.get(id).setVoteAverage(voteAverage);  // adding voteaverage and votecount data to Movie instance
             movieDB.get(id).setVoteCount(voteCount);
             return true;
         }
@@ -467,12 +467,12 @@ public class Movies implements IMovies{
         // TODO Implement this function
         if ((filmID != -1) && (collectionID != -1) && (movieDB.get(filmID) != null)) {
             movieDB.get(filmID).setCollectionID(collectionID);
-            if (collectionDB.get(collectionID) == null) {
+            if (collectionDB.get(collectionID) == null) {  // constructing new CollectionInfo instance and then adding it to collectionDB
                 CollectionInfo newCollection = new CollectionInfo(collectionID, collectionName, collectionPosterPath, collectionBackdropPath);
                 collectionDB.put(collectionID, newCollection);
                 collectionDB.get(collectionID).setFilmsID(filmID);
             }
-            else {
+            else {  // whe CollectionInfo instance is already made (adding data to CollectionInfo instance)
                 collectionDB.get(collectionID).setFilmsID(filmID);
             }
             return true;
@@ -487,7 +487,6 @@ public class Movies implements IMovies{
      * @return An array of film IDs that correspond to the given collection ID. If
      *         there are no films in the collection ID, or if the collection ID is
      *         not valid, return an empty array.
-     * 나중에 CollectionInfo에서는 MyArrayList로 되어 있으니 int[]로 바꾸는 작업 해야한다 사진 찍어 놨다.
      */
     @Override
     public int[] getFilmsInCollection(int collectionID) {
@@ -495,7 +494,7 @@ public class Movies implements IMovies{
         if (collectionID != -1 && (collectionDB.get(collectionID) != null)) {
             MyArrayList<Integer> ids = collectionDB.get(collectionID).getFilmsID();
             int[] allIDs = new int[ids.size()];
-            for (int i = 0; i < ids.size(); i++) {
+            for (int i = 0; i < ids.size(); i++) {  //copying arraylist to array
                 allIDs[i] = ids.get(i);
             }
             return allIDs;
@@ -584,7 +583,7 @@ public class Movies implements IMovies{
     public boolean setIMDB(int filmID, String imdbID) {
         // TODO Implement this function
         if ((filmID != -1) && (movieDB.get(filmID) != null)) {
-            movieDB.get(filmID).setImdb(imdbID);
+            movieDB.get(filmID).setImdb(imdbID);  // adding IMDb ID to Movie instance
             return true;
         }
         return false;
@@ -617,7 +616,7 @@ public class Movies implements IMovies{
     public boolean setPopularity(int id, double popularity) {
         // TODO Implement this function
         if ((id != -1) && (movieDB.get(id) != null)) {
-            movieDB.get(id).setPopularity(popularity);
+            movieDB.get(id).setPopularity(popularity);  // adding popularity data to Movie instance
             return true;
         }
         return false;
@@ -655,7 +654,7 @@ public class Movies implements IMovies{
     public boolean addProductionCompany(int id, Company company) {
         // TODO Implement this function
         if ((id != -1) && (movieDB.get(id) != null)) {
-            movieDB.get(id).setProductionCompanies(company);
+            movieDB.get(id).setProductionCompanies(company);  // adding production company to Movie instance
             return true;
         }
         return false;
@@ -672,7 +671,7 @@ public class Movies implements IMovies{
     public boolean addProductionCountry(int id, String country) {
         // TODO Implement this function
         if ((id != -1) && (movieDB.get(id) != null)) {
-            movieDB.get(id).setProductionCountries(country);
+            movieDB.get(id).setProductionCountries(country);  // adding production country to Movie instance
             return true;
         }
         return false;
@@ -693,7 +692,7 @@ public class Movies implements IMovies{
             MyArrayList<Company> companies = movieDB.get(id).getProductioCompanies();
             if (companies.size() > 0) {
                 Company[] allCompanies = new Company[companies.size()];
-                for (int i = 0; i < companies.size(); i++) {
+                for (int i = 0; i < companies.size(); i++) {  // copying arraylist to array
                     allCompanies[i] = companies.get(i);
                 }
                 return allCompanies;
@@ -718,7 +717,7 @@ public class Movies implements IMovies{
             MyArrayList<String> countries = movieDB.get(id).getProductionCountries();
             if (countries.size() > 0) {
                 String[] allCountries = new String[countries.size()];
-                for (int i = 0; i < countries.size(); i++) {
+                for (int i = 0; i < countries.size(); i++) {  // copying arraylist to array
                     allCountries[i] = countries.get(i);
                 }
                 return allCountries;
@@ -755,13 +754,13 @@ public class Movies implements IMovies{
         
         for (int i = 0; i < keys.size(); i++) {
             int id = keys.get(i);  //filmID
-            if (movieDB.get(id).getTitle().contains(searchTerm) == true) {
+            if (movieDB.get(id).getTitle().contains(searchTerm) == true) {  // when satisfies the requirement 
                 keysHaveTerm.add(id);
             }
         }
 
         int[] filmsID = new int[keysHaveTerm.size()];
-        for (int i = 0; i < keysHaveTerm.size(); i++) {
+        for (int i = 0; i < keysHaveTerm.size(); i++) {  //copying arraylist to array
             filmsID[i] = keysHaveTerm.get(i);
         }
 

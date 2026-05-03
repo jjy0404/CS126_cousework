@@ -46,28 +46,28 @@ public class Ratings implements IRatings {
     @Override
     public boolean add(int userid, int movieid, float rating, LocalDateTime timestamp) {
         // TODO Implement this function
-        if ((userid > 0) && (movieid > -1)) { //&& ((usersDB.get(userid).getRating().get(movieid) == null) && (moviesDB.get(movieid).getRating().get(userid) == null))) {  // 되는 조건
+        if ((userid > 0) && (movieid > -1)) { 
             if ((usersDB.get(userid) == null) && (moviesDB.get(movieid) == null)) {
-                RatingData ratingData = new RatingData(rating, timestamp);
-                MyHashMap userRating = new MyHashMap(100);
-                MyHashMap movieRating = new MyHashMap(100);
+                RatingData ratingData = new RatingData(rating, timestamp);  // making new RatingData instance
+                MyHashMap userRating = new MyHashMap(100);  // HashMap for constructing UserRating instance
+                MyHashMap movieRating = new MyHashMap(100);  // HashMap for constructing MovieRating instance
                 userRating.put(movieid, ratingData);
                 movieRating.put(userid, ratingData);
-                UserRating user = new UserRating(userid, userRating);
-                MovieRating movie = new MovieRating(movieid, movieRating);
-                user.addSumOfRatings(rating);
-                movie.addSumOfRatings(rating);
-                usersDB.put(userid, user);
-                moviesDB.put(movieid, movie);
+                UserRating user = new UserRating(userid, userRating);  // constructing UserRating instance
+                MovieRating movie = new MovieRating(movieid, movieRating);  // constructing MovieRating instance
+                user.addSumOfRatings(rating);  // adding data to UserRating instance
+                movie.addSumOfRatings(rating);  // adding data to MovieRating instance
+                usersDB.put(userid, user);  // adding data to userDB
+                moviesDB.put(movieid, movie);  // adding data to moviesDB
                 movieRatingCount.insert(1, movieid);
                 userRatingCount.insert(1, userid);
                 aveRatingCount.insert(rating, movieid);
                 size++;
                 return true;
             }
-            else if ((usersDB.get(userid) == null) && (moviesDB.get(movieid) != null)) { // movieRating is already maded
-                movieRatingCount.remove(moviesDB.get(movieid).getRatingSize(), movieid);
-                aveRatingCount.remove(this.getMovieAverageRating(movieid), movieid);
+            else if ((usersDB.get(userid) == null) && (moviesDB.get(movieid) != null)) { // MovieRating instance is already maded
+                movieRatingCount.remove(moviesDB.get(movieid).getRatingSize(), movieid);  // remove old data
+                aveRatingCount.remove(this.getMovieAverageRating(movieid), movieid);  // remove old data
                 RatingData ratingData = new RatingData(rating, timestamp);
                 MyHashMap userRating = new MyHashMap(100);
                 userRating.put(movieid, ratingData);
@@ -76,14 +76,14 @@ public class Ratings implements IRatings {
                 UserRating user = new UserRating(userid, userRating);
                 user.addSumOfRatings(rating);
                 usersDB.put(userid, user);
-                movieRatingCount.insert(moviesDB.get(movieid).getRatingSize(), movieid);
-                userRatingCount.insert(1, userid);
-                aveRatingCount.insert(this.getMovieAverageRating(movieid), movieid);
+                movieRatingCount.insert(moviesDB.get(movieid).getRatingSize(), movieid);  // updating data
+                userRatingCount.insert(1, userid);  // updating data
+                aveRatingCount.insert(this.getMovieAverageRating(movieid), movieid);  // updating data
                 size++;
                 return true;
             }
-            else if ((usersDB.get(userid) != null) && (moviesDB.get(movieid) == null)) {
-                userRatingCount.remove(usersDB.get(userid).getRatingSize(), userid);
+            else if ((usersDB.get(userid) != null) && (moviesDB.get(movieid) == null)) {  // UserRating instance is already maded
+                userRatingCount.remove(usersDB.get(userid).getRatingSize(), userid);  // remove old data
                 RatingData ratingData = new RatingData(rating, timestamp);
                 MyHashMap movieRating = new MyHashMap(100);
                 usersDB.get(userid).getRating().put(movieid, ratingData);
@@ -98,7 +98,7 @@ public class Ratings implements IRatings {
                 size++;
                 return true;
             }
-            else if ((usersDB.get(userid).getRating().get(movieid) == null) && (moviesDB.get(movieid).getRating().get(userid) == null)) {
+            else if ((usersDB.get(userid).getRating().get(movieid) == null) && (moviesDB.get(movieid).getRating().get(userid) == null)) {  //User and MovieRatign instace is already maded
                 movieRatingCount.remove(moviesDB.get(movieid).getRatingSize(), movieid);
                 userRatingCount.remove(usersDB.get(userid).getRatingSize(), userid);
                 aveRatingCount.remove(this.getMovieAverageRating(movieid), movieid);
@@ -133,13 +133,13 @@ public class Ratings implements IRatings {
         // TODO Implement this function
         if (((userid > 0) && (movieid > -1)) && (usersDB.get(userid) != null) && (moviesDB.get(movieid) != null)) {
             if (((usersDB.get(userid).getRating().get(movieid) != null) && (moviesDB.get(movieid).getRating().get(userid) != null))) {
-                movieRatingCount.remove(moviesDB.get(movieid).getRatingSize(), movieid);
-                userRatingCount.remove(usersDB.get(userid).getRatingSize(), userid);
-                aveRatingCount.remove(this.getMovieAverageRating(movieid), movieid);
-                usersDB.get(userid).subSumoOfRatings(usersDB.get(userid).getRating().get(movieid).getRating());
-                usersDB.get(userid).getRating().remove(movieid);
-                moviesDB.get(movieid).subSumoOfRatings(moviesDB.get(movieid).getRating().get(userid).getRating());
-                moviesDB.get(movieid).getRating().remove(userid);
+                movieRatingCount.remove(moviesDB.get(movieid).getRatingSize(), movieid);  // deleting old data
+                userRatingCount.remove(usersDB.get(userid).getRatingSize(), userid);  // deleting old data
+                aveRatingCount.remove(this.getMovieAverageRating(movieid), movieid);  // deleting old data
+                usersDB.get(userid).subSumoOfRatings(usersDB.get(userid).getRating().get(movieid).getRating());  // subtracting sum of rating
+                usersDB.get(userid).getRating().remove(movieid);  // deleting data from UserRating instance
+                moviesDB.get(movieid).subSumoOfRatings(moviesDB.get(movieid).getRating().get(userid).getRating());  // subtracting sum of rating
+                moviesDB.get(movieid).getRating().remove(userid);  // deleting data from MovieRating instance
                 movieRatingCount.insert(moviesDB.get(movieid).getRatingSize(), movieid);
                 userRatingCount.insert(usersDB.get(userid).getRatingSize(), userid);
                 aveRatingCount.insert(this.getMovieAverageRating(movieid), movieid);
@@ -215,7 +215,7 @@ public class Ratings implements IRatings {
             MyArrayList<RatingData> ratingData = moviesDB.get(movieid).getRating().valueSet();
             float[] allMovieRatings = new float[ratingData.size()];
 
-            for (int i = 0; i < ratingData.size(); i++) {
+            for (int i = 0; i < ratingData.size(); i++) {  // copying arraylist to array
                 allMovieRatings[i] = ratingData.get(i).getRating();
             }
             return allMovieRatings;
@@ -238,7 +238,7 @@ public class Ratings implements IRatings {
             MyArrayList<RatingData> ratingData = usersDB.get(userid).getRating().valueSet();
             float[] allUserRatings = new float[ratingData.size()];
 
-            for (int i = 0; i < ratingData.size(); i++) {
+            for (int i = 0; i < ratingData.size(); i++) {  // copying arraylist to array
                 allUserRatings[i] = ratingData.get(i).getRating();
             }
             return allUserRatings;
@@ -261,7 +261,7 @@ public class Ratings implements IRatings {
         if ((movieid > -1) && (moviesDB.get(movieid) != null)) {
             return moviesDB.get(movieid).getSumOfRatings() /  moviesDB.get(movieid).getRatingSize();
         }
-        if ((stores.getMovies().getOriginalTitle(movieid) != null) && !(stores.getMovies().getOriginalTitle(movieid).equals("")) && (moviesDB.get(movieid) == null)) {
+        if ((stores.getMovies().getOriginalTitle(movieid) != null) && !(stores.getMovies().getOriginalTitle(movieid).equals("")) && (moviesDB.get(movieid) == null)) {  // checking if the film exists in Movies store
             return 0.0f;
         }
         return -1.0f;
@@ -278,7 +278,7 @@ public class Ratings implements IRatings {
     public float getUserAverageRating(int userid) {
         // TODO Implement this function
         if ((userid > 0) && (usersDB.get(userid) != null)) {
-            return usersDB.get(userid).getSumOfRatings() / usersDB.get(userid).getRatingSize();
+            return usersDB.get(userid).getSumOfRatings() / usersDB.get(userid).getRatingSize();  // calculating average
         }
         return -1.0f;
     }
@@ -297,7 +297,7 @@ public class Ratings implements IRatings {
         MyArrayList<Integer> nRatedMovies = movieRatingCount.getTopN(num);
         int[] mostRatedMovies = new int[nRatedMovies.size()];
 
-        for (int i = 0; i < nRatedMovies.size(); i++) {
+        for (int i = 0; i < nRatedMovies.size(); i++) {  // copying arraylist to array
             mostRatedMovies[i] = nRatedMovies.get(i);
         }
 
@@ -318,7 +318,7 @@ public class Ratings implements IRatings {
         MyArrayList<Integer> nRatedUsers = userRatingCount.getTopN(num);
         int[] mostRatedUsers = new int[nRatedUsers.size()];
 
-        for (int i = 0; i < nRatedUsers.size(); i++) {
+        for (int i = 0; i < nRatedUsers.size(); i++) {  // copying arraylist to array
             mostRatedUsers[i] = nRatedUsers.get(i);
         }
 
@@ -339,7 +339,7 @@ public class Ratings implements IRatings {
         if ((moviesDB.get(movieid) != null) && (movieid > -1)) {
             return moviesDB.get(movieid).getRatingSize();
         } 
-        if ((stores.getMovies().getOriginalTitle(movieid) != null) && !(stores.getMovies().getOriginalTitle(movieid).equals("")) && (moviesDB.get(movieid) == null)) {
+        if ((stores.getMovies().getOriginalTitle(movieid) != null) && !(stores.getMovies().getOriginalTitle(movieid).equals("")) && (moviesDB.get(movieid) == null)) {  // checking if the film exists in Movies store
             return 0;
         }
 
@@ -361,7 +361,7 @@ public class Ratings implements IRatings {
         MyArrayList<Integer> nRatedMovies = aveRatingCount.getTopN(numResults);
         int[] topRatedMovies = new int[nRatedMovies.size()];
 
-        for (int i = 0; i < nRatedMovies.size(); i++) {
+        for (int i = 0; i < nRatedMovies.size(); i++) {  // copying arraylist to array
             topRatedMovies[i] = nRatedMovies.get(i);
         }
 

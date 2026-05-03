@@ -7,10 +7,10 @@ public class CastCredit implements interfaces.ICastCredit  {
     private int elementID = -1;
     private String character = null;
     private String creditID = null;
-    private int id = -1;
-    private String name = null;
-    private int order = -1;
-    private String profilePath = null;
+    private int id = -1;  // 0
+    private String name = null;  // 0
+    private int order = -1;  // 0
+    private String profilePath = null;  // 0
 
     public CastCredit (int elementID, String character, String creditID, int id, String name, int order, String profilePath) {
         this.elementID = elementID;
