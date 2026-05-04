@@ -2,6 +2,8 @@ package stores;
 
 import java.time.LocalDateTime;
 
+
+// class for storing individual rating information (rating and timestamp)
 public class RatingData {
     private float rating;
     private LocalDateTime timestamp;
@@ -11,6 +13,9 @@ public class RatingData {
         this.timestamp = timestamp;
     }
 
+
+    // getters for rating data
+
     public float getRating() {
         return rating;
     }
@@ -18,6 +23,9 @@ public class RatingData {
     public LocalDateTime LocalDateTime() {
         return timestamp;
     }
+
+
+    // setters for rating data
 
     public void setRating(float rating) {
         this.rating = rating;

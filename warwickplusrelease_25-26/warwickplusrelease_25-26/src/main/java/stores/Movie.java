@@ -4,6 +4,8 @@ import java.time.LocalDate;
 
 import structures.MyArrayList;
 
+
+// class (instance) that contains data from MovieRecord class. (except colleion movie data, this is stored at CollectionInfo class)
 public class Movie{
     private int id = -1;
     //private String name = "";
@@ -54,6 +56,9 @@ public class Movie{
         this.video = video;
         this.poster = poster;
     }
+
+
+    // getters
 
     public int getID() {
         return id;
@@ -152,7 +157,8 @@ public class Movie{
     }
 
 
-    //이제 voteAverage 부터 setters 만들면 된다.  
+    // setters for vote data, collection ID, IMDb, popularity, production companies, and production countries.
+    
     public void setVoteAverage(double voteAverage) {
         this.voteAverage = voteAverage;
     }

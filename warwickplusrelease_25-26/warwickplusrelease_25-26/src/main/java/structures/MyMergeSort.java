@@ -45,7 +45,8 @@ public class MyMergeSort {
             if (comparator.compare(temp[i], temp[j]) <= 0) {
                 array[k] = temp[i];
                 i++;
-            } else {
+            } 
+            else {
                 array[k] = temp[j];
                 j++;
             }

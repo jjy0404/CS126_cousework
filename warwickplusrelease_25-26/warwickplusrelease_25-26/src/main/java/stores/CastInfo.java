@@ -3,6 +3,7 @@ package stores;
 import structures.MyArrayList;
 
 
+// class that stores individual cast information (movies that is related, movies that stars in, credit)
 public class CastInfo{
     private Person person;
     private MyArrayList<Integer> movies = new MyArrayList<>(); // integer = filmID
@@ -15,6 +16,9 @@ public class CastInfo{
         movies.add(filmID);
         creditCount++;
     }
+
+
+    // getters for cast information
 
     public Person getPerson() {
         return person;
@@ -31,6 +35,9 @@ public class CastInfo{
     public int getCreditCount() {
         return creditCount;
     }
+
+
+    // setters for related movies and stars in movies
 
     public void addMovie(int filmID) {
         if (movies.contains(filmID) == false) {
