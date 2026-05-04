@@ -52,31 +52,38 @@ public class Credits implements ICredits{
             moviesInfo.put(id, movieInfo);  // adding to moviesInfo HashMap
             size++;
 
+            
             for (int i = 0; i < cast.length; i++) {
-                if (castsInfo.get(cast[i].getID()) == null) {  // if Person and CastInfo instance was not maded
-                    Person person = new Person(cast[i].getID(), cast[i].getName(), cast[i].getProfilePath());
+
+                int castID = cast[i].getID();
+
+                if (castsInfo.get(castID) == null) {  // if Person and CastInfo instance was not maded
+                    Person person = new Person(castID, cast[i].getName(), cast[i].getProfilePath());
                     CastInfo castInfo = new CastInfo(person, id);
-                    castsInfo.put(cast[i].getID(), castInfo);
-                    creditTree.insert(1, cast[i].getID());
+                    castsInfo.put(castID, castInfo);
+                    creditTree.insert(1, castID);
                 }
                 else {  // when there is already CastInfo instance
-                    creditTree.remove(castsInfo.get(cast[i].getID()).getCreditCount(), cast[i].getID());
-                    castsInfo.get(cast[i].getID()).addMovie(id);
-                    creditTree.insert(castsInfo.get(cast[i].getID()).getCreditCount(), cast[i].getID());
+                    creditTree.remove(castsInfo.get(castID).getCreditCount(), castID);
+                    castsInfo.get(castID).addMovie(id);
+                    creditTree.insert(castsInfo.get(castID).getCreditCount(), castID);
                 }
                 if (cast[i].getOrder() <= 3) {  // for counting star movie
-                    castsInfo.get(cast[i].getID()).addStarMovie(id);
+                    castsInfo.get(castID).addStarMovie(id);
                 }
             }
 
             for (int i = 0; i < crew.length; i++) {
-                if (crewsInfo.get(crew[i].getID()) == null) {  // if Person and CastInfo instance was not maded
-                    Person person = new Person(crew[i].getID(), crew[i].getName(), crew[i].getProfilePath());
+
+                int crewID = crew[i].getID();
+
+                if (crewsInfo.get(crewID) == null) {  // if Person and CastInfo instance was not maded
+                    Person person = new Person(crewID, crew[i].getName(), crew[i].getProfilePath());
                     CrewInfo crewInfo = new CrewInfo(person, id);
-                    crewsInfo.put(crew[i].getID(), crewInfo);
+                    crewsInfo.put(crewID, crewInfo);
                 }
                 else {  // when there is already CrewInfo instance
-                    crewsInfo.get(crew[i].getID()).addMovie(id);
+                    crewsInfo.get(crewID).addMovie(id);
                 }
             }
 
@@ -94,15 +101,20 @@ public class Credits implements ICredits{
     @Override
     public boolean remove(int id) {
         // TODO Implement this function
-        if (id > -1 && moviesInfo.get(id) != null) {
-            CastCredit[] casts = moviesInfo.get(id).getCasts();
-            CrewCredit[] crews = moviesInfo.get(id).getCrews();
+        MovieInfo movieInfo = moviesInfo.get(id);
+
+        if (id > -1 && movieInfo != null) {
+            CastCredit[] casts = movieInfo.getCasts();
+            CrewCredit[] crews = movieInfo.getCrews();
 
             for (int i = 0; i < casts.length; i++) {  // removing data from creditTree and each CastInfo instance
-                creditTree.remove(castsInfo.get(casts[i].getID()).getCreditCount(), casts[i].getID());
-                castsInfo.get(casts[i].getID()).removeMovie(id);
-                castsInfo.get(casts[i].getID()).removeStarMovie(id);
-                creditTree.insert(castsInfo.get(casts[i].getID()).getCreditCount(), casts[i].getID());
+
+                int castID = casts[i].getID();
+
+                creditTree.remove(castsInfo.get(castID).getCreditCount(), castID);
+                castsInfo.get(castID).removeMovie(id);
+                castsInfo.get(castID).removeStarMovie(id);
+                creditTree.insert(castsInfo.get(castID).getCreditCount(), castID);
             }
 
             for (int i = 0; i < crews.length; i++) {  // removing data from each CrewInfo instance
@@ -146,8 +158,10 @@ public class Credits implements ICredits{
     @Override
     public CrewCredit[] getFilmCrew(int filmID) {
         // TODO Implement this function
-        if ((filmID > -1) && (moviesInfo.get(filmID) != null)) {
-            return moviesInfo.get(filmID).getCrews();
+        MovieInfo movieInfo = moviesInfo.get(filmID);
+
+        if ((filmID > -1) && (movieInfo != null)) {
+            return movieInfo.getCrews();
         }
         return new CrewCredit[0];
     }
@@ -162,8 +176,10 @@ public class Credits implements ICredits{
     @Override
     public int sizeOfCast(int filmID) {
         // TODO Implement this function
-        if ((filmID > -1) && (moviesInfo.get(filmID) != null)) {
-            return moviesInfo.get(filmID).getSizeOfCast();
+        MovieInfo movieInfo = moviesInfo.get(filmID);
+
+        if ((filmID > -1) && (movieInfo != null)) {
+            return movieInfo.getSizeOfCast();
         }
 
         return -1;
@@ -179,8 +195,10 @@ public class Credits implements ICredits{
     @Override
     public int sizeOfCrew(int filmID) {
         // TODO Implement this function
-        if ((filmID > -1) && (moviesInfo.get(filmID) != null)) {
-            return moviesInfo.get(filmID).getSizeOfCrew();
+        MovieInfo movieInfo = moviesInfo.get(filmID);
+
+        if ((filmID > -1) && (movieInfo != null)) {
+            return movieInfo.getSizeOfCrew();
         }
 
         return -1;
@@ -292,8 +310,10 @@ public class Credits implements ICredits{
     @Override
     public Person getCast(int castID) {
         // TODO Implement this function
-        if (castID > -1 && castsInfo.get(castID) != null) {
-            return castsInfo.get(castID).getPerson();
+        CastInfo castInfo = castsInfo.get(castID);
+
+        if (castID > -1 && castInfo != null) {
+            return castInfo.getPerson();
         }
         return null;
     }
@@ -308,8 +328,10 @@ public class Credits implements ICredits{
     @Override
     public Person getCrew(int crewID){
         // TODO Implement this function
-        if (crewID > -1 && crewsInfo.get(crewID) != null) {
-            return crewsInfo.get(crewID).getPerson();
+        CrewInfo crewInfo = crewsInfo.get(crewID);
+
+        if (crewID > -1 && crewInfo != null) {
+            return crewInfo.getPerson();
         }
 
         return null;
@@ -327,8 +349,10 @@ public class Credits implements ICredits{
     @Override
     public int[] getCastFilms(int castID){
         // TODO Implement this function
-        if (castID > -1 && castsInfo.get(castID) != null) {
-            MyArrayList<Integer> films = castsInfo.get(castID).getMovies();
+        CastInfo castInfo = castsInfo.get(castID);
+
+        if (castID > -1 && castInfo != null) {
+            MyArrayList<Integer> films = castInfo.getMovies();
             int[] allFilms = new int[films.size()];
 
             for (int i = 0; i < films.size(); i++) {  // copying arraylist to array
@@ -351,8 +375,10 @@ public class Credits implements ICredits{
     @Override
     public int[] getCrewFilms(int crewID) {
         // TODO Implement this function
-        if (crewID > -1 && crewsInfo.get(crewID) != null) {
-            MyArrayList<Integer> films = crewsInfo.get(crewID).getMovies();
+        CrewInfo crewInfo = crewsInfo.get(crewID);
+
+        if (crewID > -1 && crewInfo != null) {
+            MyArrayList<Integer> films = crewInfo.getMovies();
             int[] allFilms = new int[films.size()];
 
             for (int i = 0; i < films.size(); i++) {  // copying arraylist to array
@@ -377,8 +403,10 @@ public class Credits implements ICredits{
     @Override
     public int[] getCastStarsInFilms(int castID){
         // TODO Implement this function
-        if (castID > -1 && castsInfo.get(castID) != null) {
-            MyArrayList<Integer> films = castsInfo.get(castID).getCastStarMovies();
+        CastInfo castInfo = castsInfo.get(castID);
+
+        if (castID > -1 && castInfo != null) {
+            MyArrayList<Integer> films = castInfo.getCastStarMovies();
             int[] allFilms = new int[films.size()];
 
             for (int i = 0; i < films.size(); i++) {  // copying arraylist to array
@@ -429,8 +457,10 @@ public class Credits implements ICredits{
     @Override
     public int getNumCastCredits(int castID) {
         // TODO Implement this function
-        if (castID > -1 && castsInfo.get(castID) != null) {
-            return castsInfo.get(castID).getCreditCount();
+        CastInfo castInfo = castsInfo.get(castID);
+
+        if (castID > -1 && castInfo != null) {
+            return castInfo.getCreditCount();
         }
         return -1;
     }

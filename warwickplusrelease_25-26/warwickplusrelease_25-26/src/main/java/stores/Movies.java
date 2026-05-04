@@ -79,12 +79,14 @@ public class Movies implements IMovies{
     @Override
     public boolean remove(int id) {
         // TODO Implement this function
-        if ((id != -1) && (movieDB.get(id) != null)) {  
-            int collectionID = movieDB.get(id).getCollectionID();
+        Movie movie = movieDB.get(id);
+
+        if ((id != -1) && (movie != null)) {  
+            int collectionID = movie.getCollectionID();
             if ((collectionID != -1) && (collectionDB.get(collectionID) != null)) {
                 collectionDB.get(collectionID).removeFilmID(id);  // deleting data from collectionDB
             }
-            moviesByDate.remove(movieDB.get(id).getRelease(), id);  //deleating data from moviesByDate
+            moviesByDate.remove(movie.getRelease(), id);  //deleating data from moviesByDate
             movieDB.remove(id);  // deleting data from movieDB
             return true;
         }
@@ -101,6 +103,7 @@ public class Movies implements IMovies{
     public int[] getAllIDs() {
         // TODO Implement this function
         MyArrayList<Integer> keys = movieDB.keySet();
+
         if (keys.size() > 0) {  // copying arraylist to array
             int[] allIDs = new int[keys.size()];
             for (int i = 0; i < keys.size(); i++) {
@@ -143,8 +146,10 @@ public class Movies implements IMovies{
     @Override
     public String getTitle(int id) {
         // TODO Implement this function
-        if ((id != -1) && (movieDB.get(id) != null)) {
-            return movieDB.get(id).getTitle();
+        Movie movie = movieDB.get(id);
+
+        if ((id != -1) && (movie != null)) {
+            return movie.getTitle();
         }
         return null;
     }
@@ -160,8 +165,10 @@ public class Movies implements IMovies{
     @Override
     public String getOriginalTitle(int id) {
         // TODO Implement this function
-        if ((id != -1) && (movieDB.get(id) != null)) {
-            return movieDB.get(id).getOriginalTitle();
+        Movie movie = movieDB.get(id);
+
+        if ((id != -1) && (movie != null)) {
+            return movie.getOriginalTitle();
         }
         return null;
     }
@@ -176,8 +183,10 @@ public class Movies implements IMovies{
     @Override
     public String getOverview(int id) {
         // TODO Implement this function
-        if ((id != -1) && (movieDB.get(id) != null)) {
-            return movieDB.get(id).getOverview();
+        Movie movie = movieDB.get(id);
+
+        if ((id != -1) && (movie != null)) {
+            return movie.getOverview();
         }
         return null;
     }
@@ -192,8 +201,10 @@ public class Movies implements IMovies{
     @Override
     public String getTagline(int id) {
         // TODO Implement this function
-        if ((id != -1) && (movieDB.get(id) != null)) {
-            return movieDB.get(id).getTagline();
+        Movie movie = movieDB.get(id);
+
+        if ((id != -1) && (movie != null)) {
+            return movie.getTagline();
         }
         return null;
     }
@@ -208,8 +219,10 @@ public class Movies implements IMovies{
     @Override
     public String getStatus(int id) {
         // TODO Implement this function
-        if ((id != -1) && (movieDB.get(id) != null)) {
-            return movieDB.get(id).getStatus();
+        Movie movie = movieDB.get(id);
+
+        if ((id != -1) && (movie != null)) {
+            return movie.getStatus();
         }
         return null;
     }
@@ -224,8 +237,10 @@ public class Movies implements IMovies{
     @Override
     public Genre[] getGenres(int id) {
         // TODO Implement this function
-        if ((id != -1) && (movieDB.get(id) != null)) {
-            return movieDB.get(id).getGenres();
+        Movie movie = movieDB.get(id);
+
+        if ((id != -1) && (movie != null)) {
+            return movie.getGenres();
         }
         return null;
     }
@@ -240,8 +255,10 @@ public class Movies implements IMovies{
     @Override
     public LocalDate getRelease(int id) {
         // TODO Implement this function
-        if ((id != -1) && (movieDB.get(id) != null)) {
-            return movieDB.get(id).getRelease();
+        Movie movie = movieDB.get(id);
+
+        if ((id != -1) && (movie != null)) {
+            return movie.getRelease();
         }
         return null;
     }
@@ -256,8 +273,10 @@ public class Movies implements IMovies{
     @Override
     public long getBudget(int id) {
         // TODO Implement this function
-        if ((id != -1) && (movieDB.get(id) != null)) {
-            return movieDB.get(id).getBudget();
+        Movie movie = movieDB.get(id);
+
+        if ((id != -1) && (movie != null)) {
+            return movie.getBudget();
         }
         return -1;
     }
@@ -272,8 +291,10 @@ public class Movies implements IMovies{
     @Override
     public long getRevenue(int id) {
         // TODO Implement this function
-        if ((id != -1) && (movieDB.get(id) != null)) {
-            return movieDB.get(id).getRevenue();
+        Movie movie = movieDB.get(id);
+
+        if ((id != -1) && (movie != null)) {
+            return movie.getRevenue();
         }
         return -1;
     }
@@ -288,8 +309,10 @@ public class Movies implements IMovies{
     @Override
     public String[] getLanguages(int id) {
         // TODO Implement this function
-        if ((id != -1) && (movieDB.get(id) != null)) {
-            return movieDB.get(id).getLanguages();
+        Movie movie = movieDB.get(id);
+
+        if ((id != -1) && (movie != null)) {
+            return movie.getLanguages();
         }
         return null;
     }
@@ -305,8 +328,10 @@ public class Movies implements IMovies{
     @Override
     public String getOriginalLanguage(int id) {
         // TODO Implement this function
-        if ((id != -1) && (movieDB.get(id) != null)) {
-            return movieDB.get(id).getOriginalLanguage();
+        Movie movie = movieDB.get(id);
+
+        if ((id != -1) && (movie != null)) {
+            return movie.getOriginalLanguage();
         }
         return null;
     }
@@ -321,8 +346,10 @@ public class Movies implements IMovies{
     @Override
     public double getRuntime(int id) {
         // TODO Implement this function
-        if ((id != -1) && (movieDB.get(id) != null)) {
-            return movieDB.get(id).getRuntime();
+        Movie movie = movieDB.get(id);
+
+        if ((id != -1) && (movie != null)) {
+            return movie.getRuntime();
         }
         return -1.0d;
     }
@@ -337,8 +364,10 @@ public class Movies implements IMovies{
     @Override
     public String getHomepage(int id) {
         // TODO Implement this function
-        if ((id != -1) && (movieDB.get(id) != null)) {
-            return movieDB.get(id).getHomepage();
+        Movie movie = movieDB.get(id);
+
+        if ((id != -1) && (movie != null)) {
+            return movie.getHomepage();
         }
         return null;
     }
@@ -354,8 +383,10 @@ public class Movies implements IMovies{
     @Override
     public boolean getAdult(int id) {
         // TODO Implement this function
-        if ((id != -1) && (movieDB.get(id) != null)) {
-            return movieDB.get(id).getAdult();
+        Movie movie = movieDB.get(id);
+
+        if ((id != -1) && (movie != null)) {
+            return movie.getAdult();
         }
         return false;
     }
@@ -371,8 +402,10 @@ public class Movies implements IMovies{
     @Override
     public boolean getVideo(int id) {
         // TODO Implement this function
-        if ((id != -1) && (movieDB.get(id) != null)) {
-            return movieDB.get(id).getVideo();
+        Movie movie = movieDB.get(id);
+
+        if ((id != -1) && (movie != null)) {
+            return movie.getVideo();
         }
         return false;
     }
@@ -387,8 +420,10 @@ public class Movies implements IMovies{
     @Override
     public String getPoster(int id) {
         // TODO Implement this function
-        if ((id != -1) && (movieDB.get(id) != null)) {
-            return movieDB.get(id).getPoster();
+        Movie movie = movieDB.get(id);
+
+        if ((id != -1) && (movie != null)) {
+            return movie.getPoster();
         }
         return null;
     }
@@ -406,9 +441,11 @@ public class Movies implements IMovies{
     @Override
     public boolean setVote(int id, double voteAverage, int voteCount) {
         // TODO Implement this function
-        if ((id != -1) && (movieDB.get(id) != null) && (voteAverage != -1.0) && (voteCount != -1)) {
-            movieDB.get(id).setVoteAverage(voteAverage);  // adding voteaverage and votecount data to Movie instance
-            movieDB.get(id).setVoteCount(voteCount);
+        Movie movie = movieDB.get(id);
+
+        if ((id != -1) && (movie != null) && (voteAverage != -1.0) && (voteCount != -1)) {
+            movie.setVoteAverage(voteAverage);  // adding voteaverage and votecount data to Movie instance
+            movie.setVoteCount(voteCount);
             return true;
         }
         return false;
@@ -425,8 +462,10 @@ public class Movies implements IMovies{
     @Override
     public double getVoteAverage(int id) {
         // TODO Implement this function
-        if ((id != -1) && (movieDB.get(id) != null)) {
-            return movieDB.get(id).getVoteAverage();
+        Movie movie = movieDB.get(id);
+
+        if ((id != -1) && (movie != null)) {
+            return movie.getVoteAverage();
         }
         return -1.0d;
     }
@@ -442,8 +481,10 @@ public class Movies implements IMovies{
     @Override
     public int getVoteCount(int id) {
         // TODO Implement this function
-        if ((id != -1) && (movieDB.get(id) != null)) {
-            return movieDB.get(id).getVoteCount();
+        Movie movie = movieDB.get(id);
+
+        if ((id != -1) && (movie != null)) {
+            return movie.getVoteCount();
         }
         return -1;
     }
@@ -465,15 +506,18 @@ public class Movies implements IMovies{
     @Override
     public boolean addToCollection(int filmID, int collectionID, String collectionName, String collectionPosterPath, String collectionBackdropPath) {
         // TODO Implement this function
-        if ((filmID != -1) && (collectionID != -1) && (movieDB.get(filmID) != null)) {
-            movieDB.get(filmID).setCollectionID(collectionID);
-            if (collectionDB.get(collectionID) == null) {  // constructing new CollectionInfo instance and then adding it to collectionDB
+        Movie movie = movieDB.get(filmID);
+        CollectionInfo collectionInfo = collectionDB.get(collectionID);
+
+        if ((filmID != -1) && (collectionID != -1) && (movie != null)) {
+            movie.setCollectionID(collectionID);
+            if (collectionInfo == null) {  // constructing new CollectionInfo instance and then adding it to collectionDB
                 CollectionInfo newCollection = new CollectionInfo(collectionID, collectionName, collectionPosterPath, collectionBackdropPath);
                 collectionDB.put(collectionID, newCollection);
                 collectionDB.get(collectionID).setFilmsID(filmID);
             }
             else {  // whe CollectionInfo instance is already made (adding data to CollectionInfo instance)
-                collectionDB.get(collectionID).setFilmsID(filmID);
+                collectionInfo.setFilmsID(filmID);
             }
             return true;
         }
@@ -491,8 +535,10 @@ public class Movies implements IMovies{
     @Override
     public int[] getFilmsInCollection(int collectionID) {
         // TODO Implement this function
-        if (collectionID != -1 && (collectionDB.get(collectionID) != null)) {
-            MyArrayList<Integer> ids = collectionDB.get(collectionID).getFilmsID();
+        CollectionInfo collectionInfo = collectionDB.get(collectionID);
+
+        if (collectionID != -1 && (collectionInfo != null)) {
+            MyArrayList<Integer> ids = collectionInfo.getFilmsID();
             int[] allIDs = new int[ids.size()];
             for (int i = 0; i < ids.size(); i++) {  //copying arraylist to array
                 allIDs[i] = ids.get(i);
@@ -512,8 +558,10 @@ public class Movies implements IMovies{
     @Override
     public String getCollectionName(int collectionID) {
         // TODO Implement this function
-        if ((collectionID != -1) && (collectionDB.get(collectionID) != null)) {
-            return collectionDB.get(collectionID).getCollectionName();
+        CollectionInfo collectionInfo = collectionDB.get(collectionID);
+
+        if ((collectionID != -1) && (collectionInfo != null)) {
+            return collectionInfo.getCollectionName();
         }
         return null;
     }
@@ -528,8 +576,10 @@ public class Movies implements IMovies{
     @Override
     public String getCollectionPoster(int collectionID) {
         // TODO Implement this function
-        if ((collectionID != -1) && (collectionDB.get(collectionID) != null)) {
-            return collectionDB.get(collectionID).getCollectionPosterPath();
+        CollectionInfo collectionInfo = collectionDB.get(collectionID);
+
+        if ((collectionID != -1) && (collectionInfo != null)) {
+            return collectionInfo.getCollectionPosterPath();
         }
 
         return null;
@@ -545,8 +595,10 @@ public class Movies implements IMovies{
     @Override
     public String getCollectionBackdrop(int collectionID) {
         // TODO Implement this function
-        if ((collectionID != -1) && (collectionDB.get(collectionID) != null)) {
-            return collectionDB.get(collectionID).getCollectionBackdropPath();
+        CollectionInfo collectionInfo = collectionDB.get(collectionID);
+
+        if ((collectionID != -1) && (collectionInfo != null)) {
+            return collectionInfo.getCollectionBackdropPath();
         }
         return null;
     }
@@ -562,8 +614,10 @@ public class Movies implements IMovies{
     @Override
     public int getCollectionID(int filmID) {
         // TODO Implement this function
-        if ((filmID != -1) && (movieDB.get(filmID) != null)) {
-            int collectionID = movieDB.get(filmID).getCollectionID();
+        Movie movie = movieDB.get(filmID);
+
+        if ((filmID != -1) && (movie != null)) {
+            int collectionID = movie.getCollectionID();
             if ((collectionID != -1) && (collectionDB.get(collectionID) != null)) {
                 return collectionID;
             }
@@ -582,8 +636,10 @@ public class Movies implements IMovies{
     @Override
     public boolean setIMDB(int filmID, String imdbID) {
         // TODO Implement this function
-        if ((filmID != -1) && (movieDB.get(filmID) != null)) {
-            movieDB.get(filmID).setImdb(imdbID);  // adding IMDb ID to Movie instance
+        Movie movie = movieDB.get(filmID);
+
+        if ((filmID != -1) && (movie != null)) {
+            movie.setImdb(imdbID);  // adding IMDb ID to Movie instance
             return true;
         }
         return false;
@@ -599,8 +655,10 @@ public class Movies implements IMovies{
     @Override
     public String getIMDB(int filmID) {
         // TODO Implement this function
-        if ((filmID != -1) && (movieDB.get(filmID) != null)) {
-            return movieDB.get(filmID).getImdb();
+        Movie movie = movieDB.get(filmID);
+
+        if ((filmID != -1) && (movie != null)) {
+            return movie.getImdb();
         }
         return null;
     }
@@ -615,8 +673,10 @@ public class Movies implements IMovies{
     @Override
     public boolean setPopularity(int id, double popularity) {
         // TODO Implement this function
-        if ((id != -1) && (movieDB.get(id) != null)) {
-            movieDB.get(id).setPopularity(popularity);  // adding popularity data to Movie instance
+        Movie movie = movieDB.get(id);
+
+        if ((id != -1) && (movie != null)) {
+            movie.setPopularity(popularity);  // adding popularity data to Movie instance
             return true;
         }
         return false;
@@ -632,12 +692,14 @@ public class Movies implements IMovies{
     @Override
     public double getPopularity(int id) {
         // TODO Implement this function
-        if ((id != -1) && (movieDB.get(id) != null)) {
-            if (movieDB.get(id).getPopularity() == -1.0d) {
-                movieDB.get(id).setPopularity(0.0d);
-                return movieDB.get(id).getPopularity();
+        Movie movie = movieDB.get(id);
+
+        if ((id != -1) && (movie != null)) {
+            if (movie.getPopularity() == -1.0d) {
+                movie.setPopularity(0.0d);
+                return movie.getPopularity();
             }
-            return movieDB.get(id).getPopularity();
+            return movie.getPopularity();
         }
         return -1.0d;
     }
@@ -653,8 +715,10 @@ public class Movies implements IMovies{
     @Override
     public boolean addProductionCompany(int id, Company company) {
         // TODO Implement this function
-        if ((id != -1) && (movieDB.get(id) != null)) {
-            movieDB.get(id).setProductionCompanies(company);  // adding production company to Movie instance
+        Movie movie = movieDB.get(id);
+
+        if ((id != -1) && (movie != null)) {
+            movie.setProductionCompanies(company);  // adding production company to Movie instance
             return true;
         }
         return false;
@@ -670,8 +734,10 @@ public class Movies implements IMovies{
     @Override
     public boolean addProductionCountry(int id, String country) {
         // TODO Implement this function
-        if ((id != -1) && (movieDB.get(id) != null)) {
-            movieDB.get(id).setProductionCountries(country);  // adding production country to Movie instance
+        Movie movie = movieDB.get(id);
+
+        if ((id != -1) && (movie != null)) {
+            movie.setProductionCountries(country);  // adding production country to Movie instance
             return true;
         }
         return false;
@@ -688,8 +754,10 @@ public class Movies implements IMovies{
     @Override
     public Company[] getProductionCompanies(int id) {
         // TODO Implement this function
-        if ((id != -1) && (movieDB.get(id) != null)) {
-            MyArrayList<Company> companies = movieDB.get(id).getProductioCompanies();
+        Movie movie = movieDB.get(id);
+
+        if ((id != -1) && (movie != null)) {
+            MyArrayList<Company> companies = movie.getProductioCompanies();
             if (companies.size() > 0) {
                 Company[] allCompanies = new Company[companies.size()];
                 for (int i = 0; i < companies.size(); i++) {  // copying arraylist to array
@@ -713,8 +781,10 @@ public class Movies implements IMovies{
     @Override
     public String[] getProductionCountries(int id) {
         // TODO Implement this function
-        if ((id != -1) && (movieDB.get(id) != null)) {
-            MyArrayList<String> countries = movieDB.get(id).getProductionCountries();
+        Movie movie = movieDB.get(id);
+
+        if ((id != -1) && (movie != null)) {
+            MyArrayList<String> countries = movie.getProductionCountries();
             if (countries.size() > 0) {
                 String[] allCountries = new String[countries.size()];
                 for (int i = 0; i < countries.size(); i++) {  // copying arraylist to array
@@ -754,7 +824,9 @@ public class Movies implements IMovies{
         
         for (int i = 0; i < keys.size(); i++) {
             int id = keys.get(i);  //filmID
-            if (movieDB.get(id).getTitle().contains(searchTerm) == true) {  // when satisfies the requirement 
+            Movie movie = movieDB.get(id);
+
+            if ((movie.getTitle().contains(searchTerm) == true) || (movie.getOriginalTitle().contains(searchTerm) == true) || (movie.getOverview().contains(searchTerm) == true)) {  // when satisfies the requirement 
                 keysHaveTerm.add(id);
             }
         }
